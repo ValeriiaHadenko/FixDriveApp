@@ -1,0 +1,38 @@
+﻿<Properties StartupConfiguration="{16FDEF66-A69A-4B4B-ADB3-5CD4D5258732}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="FixDriveApp/Pages/InventoryPage.xaml.cs">
+    <Files>
+      <File FileName="FixDriveApp/Models/Grouping.cs" Line="1" Column="1" />
+      <File FileName="FixDriveApp/Models/Order.cs" Line="1" Column="1" />
+      <File FileName="FixDriveApp/Pages/OrderPage.xaml" Line="1" Column="1" />
+      <File FileName="FixDriveApp/Pages/OrderPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="FixDriveApp/Pages/InventoryPage.xaml.cs" Line="12" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="FixDriveApp" expanded="True">
+            <Node name="FixDriveApp" expanded="True">
+              <Node name="Models" expanded="True" />
+              <Node name="Pages" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="App.xaml" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State name="__root__">
+          <Node name="FixDriveApp" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.FixDriveApp PreferredExecutionTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

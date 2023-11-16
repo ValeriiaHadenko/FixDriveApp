@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FixDriveApp.InventoryPage"
+             Title="InventoryPage">
+
+    <ScrollView Orientation="Both">
+        <StackLayout Margin="20" Spacing="20" Orientation="Vertical">
+
+            <SearchBar
+                x:Name="searchBar"
+                FontSize="21"
+                Placeholder="Search"
+                WidthRequest="400"
+                HeightRequest="40"
+                HorizontalOptions="Start"
+                TextChanged="searchBar_TextChanged"/>
+
+            <Grid ColumnSpacing="20" RowSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="400"/>
+                    <ColumnDefinition Width="800"/>
+ 
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="500"/>
+                    <RowDefinition Height="60"/>
+
+                </Grid.RowDefinitions>
+
+                <StackLayout Grid.Column="0" Grid.Row="0" Grid.RowSpan="2">
+
+                    <Label
+                        HorizontalOptions="Start"
+                        Padding="20, 0, 0, 15"
+                        Text="Products:"
+                        WidthRequest="150"
+                        FontSize="24" />
+
+                    <ListView x:Name="inventoryListView" ItemSelected="inventoryListView_ItemSelected">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextCell Text="{Binding ProductName}" Detail="{Binding ProductId, StringFormat=ID \{0\}}"/>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                    <ImageButton
+                        x:Name="btnAdd"
+                        Source="plus.png"
+                        Grid.Column="0" Grid.Row="1"
+                        VerticalOptions="End"
+                        HorizontalOptions="Start"
+                        WidthRequest = "60"
+                        HeightRequest="50"
+                        Margin="0, 10, 0, 0"
+                        Clicked="btnAdd_Clicked"/>
+
+                </StackLayout>
+
+                <Border
+                    x:Name="border"
+                    IsVisible="False"
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    Stroke="#6f3799"
+                    StrokeThickness="2"
+                    Padding="5, 10">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10"/>
+                    </Border.StrokeShape>
+
+                    <StackLayout x:Name="inventoryListViewChange" Grid.Column="1" Grid.Row="0" IsVisible="false">
+
+                        <StackLayout x:Name="StackLayoutIdProduct" Orientation="Horizontal" Padding="10" Spacing="20">
+                        <Label
+                            Text="Product ID"
+                            WidthRequest="150"
+                            FontSize="24"
+                            VerticalOptions="Center"/>
+                        <Entry
+                            x:Name="selectedItemEntryID"
+                            IsReadOnly="True"
+                            Text=""
+                            WidthRequest="100"
+                            FontSize="24"
+                            BackgroundColor="#6f3799"/>
+                    </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" Padding="10" Spacing="20">
+                            <Label
+                                Text="Name"
+                                WidthRequest="150"
+                                FontSize="24"
+                                VerticalOptions="Center"/>
+                            <Entry
+                                x:Name="selectedItemEntryName"
+                                IsReadOnly="True"
+                                Text=""
+                                WidthRequest="300"
+                                FontSize="24"/>
+                        </StackLayout>
+                
+                        <StackLayout Orientation="Horizontal" Padding="10" Spacing="20">
+                            <Label
+                                Text="Model"
+                                WidthRequest="150"
+                                FontSize="24"
+                                VerticalOptions="Center"/>
+                            <Entry
+                                x:Name="selectedItemEntryModel"
+                                IsReadOnly="True"
+                                Text=""
+                                WidthRequest="300"
+                                FontSize="24"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" Padding="10" Spacing="20">
+                            <Label
+                                Text="Description"
+                                WidthRequest="150"
+                                FontSize="24"
+                                VerticalOptions="Center"/>
+
+                            <Editor
+                                x:Name="selectedItemEntryDescription"
+                                IsReadOnly="True"
+                                MinimumWidthRequest="450"
+                                MinimumHeightRequest="75"
+                                FontSize="24"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" Padding="10" Spacing="20">
+                            <Label
+                                Text="Price"
+                                WidthRequest="150"
+                                FontSize="24"
+                                VerticalOptions="Center"/>
+                            <Entry
+                                x:Name="selectedItemEntryPrice"
+                                IsReadOnly="True"
+                                Text=""
+                                WidthRequest="150"
+                                FontSize="24"/>
+                            <Label
+                                Text="$"
+                                FontSize="24"
+                                VerticalOptions="Center"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" Padding="10" Spacing="20">
+                            <Label
+                                Text="Quantity"
+                                WidthRequest="150"
+                                FontSize="24"
+                                VerticalOptions="Center"/>
+                            <Entry
+                                x:Name="selectedItemEntryQuantity"
+                                IsReadOnly="True"
+                                Text=""
+                                WidthRequest="150"
+                                FontSize="24"/>
+                            <Label
+                                Text="pcs."
+                                FontSize="24"
+                                VerticalOptions="Center"/>                            
+                        </StackLayout>
+
+                        <StackLayout HeightRequest="60" Orientation="Horizontal" Padding="10" Spacing="20" >
+                            <Label
+                                Text="Supplier"
+                                WidthRequest="150"
+                                FontSize="24"
+                                VerticalOptions="Center"/>
+                            <Entry
+                                x:Name="selectedItemEntrySupplierName"
+                                IsReadOnly="True"
+                                Text=""
+                                WidthRequest="300"
+                                FontSize="24"/>
+                            <ListView
+                                x:Name="supplierListView"
+                                IsVisible="False"
+                                WidthRequest="300"
+                                HeightRequest="50"
+                                HorizontalOptions="Start"
+                                SelectionMode="Single"
+                                ItemSelected="supplierListView_ItemSelected"
+                                ItemsSource="{Binding suppliers}">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextCell Text="{Binding SupplierName}"/>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </StackLayout>
+
+                    </StackLayout>
+                </Border>
+
+                <StackLayout Orientation="Horizontal" Grid.Column="1" Grid.Row="1" Spacing="50">
+
+                    <ImageButton
+                        x:Name="btnEdit"
+                        Source="edit.png"
+                        IsVisible="false"
+                        VerticalOptions="End"
+                        HorizontalOptions="Center"
+                        WidthRequest = "60"
+                        HeightRequest="50"
+                        Clicked="btnEdit_Clicked" />
+
+                    <ImageButton
+                        x:Name="btnSave"
+                        Source="save.png"
+                        IsVisible="false"
+                        VerticalOptions="End"
+                        HorizontalOptions="Center"
+                        WidthRequest = "60"
+                        HeightRequest="50"
+                        Clicked="btnSave_Clicked"/>
+
+                    <ImageButton
+                        x:Name="btnDelete"
+                        Source="trash.png"
+                        IsVisible="false"
+                        VerticalOptions="End"
+                        HorizontalOptions="Center"
+                        WidthRequest = "60"
+                        HeightRequest="50"
+                        Clicked="btnDelete_Clicked"/>
+
+                    <Button
+                        x:Name="btnCreateProduct"
+                        Text="Add"
+                        IsVisible="false"
+                        VerticalOptions="End"
+                        HorizontalOptions="Center"
+                        WidthRequest = "100"
+                        HeightRequest="50"
+                        Clicked="btnCreateProduct_Clicked"/>
+
+                </StackLayout>
+            
+            </Grid>
+
+            <HorizontalStackLayout
+                Spacing ="30"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                HeightRequest="50"
+                Margin="0, 50">
+
+                <Button
+                    Text="Go back"
+                    BackgroundColor="#6f3799"
+                    TextColor="#d0cac1"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    WidthRequest="150"
+                    Clicked="OnNavigateBackButtonClicked"/>
+
+                <Button
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    Text="Go to Supplier"
+                    Clicked="OnNavigateSupplierButtonClicked"/>
+
+                <Button
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    Text="Make order"
+                    Clicked="OnNavigateMakeOrderButtonClicked"/>
+
+            </HorizontalStackLayout>
+      
+        </StackLayout>
+    </ScrollView>
+    
+</ContentPage>

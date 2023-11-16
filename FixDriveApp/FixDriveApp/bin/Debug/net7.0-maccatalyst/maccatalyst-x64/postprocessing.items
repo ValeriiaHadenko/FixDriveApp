@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_PostProcessingItem Include="FixDriveApp.app/Contents/MacOS/FixDriveApp">
+      <BCSymbolMapName>FixDriveApp.bcsymbolmap</BCSymbolMapName>
+      <NoDSymUtil>true</NoDSymUtil>
+      <dSYMSourcePathExists>false</dSYMSourcePathExists>
+      <NoSymbolStrip>true</NoSymbolStrip>
+      <dSYMInfoPlistRelativePath>FixDriveApp.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
+      <SymbolFile>/Users/leroro/Projects/FixDriveApplication/FixDriveApp/FixDriveApp/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/mtouch-symbols.list</SymbolFile>
+      <DSymName>FixDriveApp.app.dSYM</DSymName>
+      <SourceProjectPath>/Users/leroro/Projects/FixDriveApplication/FixDriveApp/FixDriveApp</SourceProjectPath>
+    </_PostProcessingItem>
+  </ItemGroup>
+</Project>

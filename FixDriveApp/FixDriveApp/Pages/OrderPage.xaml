@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FixDriveApp.OrderPage"
+             Title="OrderPage">
+
+    <ScrollView Orientation="Both">
+        <VerticalStackLayout Margin="20" Spacing="20">
+            <Label
+                Text="Make an order"
+                FontSize="24"
+                HorizontalOptions="Center"/>
+            <Border
+                Stroke="#6f3799"
+                StrokeThickness="2"
+                Padding="5, 10">
+
+                <HorizontalStackLayout
+                    HorizontalOptions="Start"
+                    Spacing="70">
+                    <CollectionView
+                        x:Name="collectionViewProductGroups"
+                        SelectionChanged="collectionViewProductGroups_SelectionChanged"
+                        ItemsSource="{Binding ProductGroups}"
+                        IsGrouped="True"
+                        WidthRequest="400"
+                        HeightRequest="250"
+                        HorizontalOptions="Start"
+                        SelectionMode="Single">
+
+                        <CollectionView.GroupHeaderTemplate>
+                            <DataTemplate>
+                                <Label Text="{Binding Name}"
+                                    FontSize="22"
+                                    TextColor="#6f3799"
+                                    Background="White"
+                                    FontAttributes="Bold"
+                                    Padding="5, 10"/>
+                            </DataTemplate>
+                        </CollectionView.GroupHeaderTemplate>
+
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                    <StackLayout Padding="8">
+                                        <Label Text="{Binding ProductName} " FontSize="18"  />
+                                        <Label Text="{Binding Model} " FontSize="16" TextColor="LightGray"/>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                    <VerticalStackLayout>
+                        <HorizontalStackLayout Padding="10" Spacing="20">
+                            <Label
+                                Text="You selected"
+                                WidthRequest="150"
+                                FontSize="24"
+                                VerticalOptions="Center"/>
+                            <Label
+                                x:Name="selectedItemLabelProduct"
+                                Text=""
+                                FontSize="24"
+                                VerticalOptions="Center"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout Padding="10" Spacing="20">
+                            <Label
+                                Text="Quantity"
+                                WidthRequest="150"
+                                FontSize="24"
+                                VerticalOptions="Center"/>
+                            <Entry
+                                x:Name="selectedItemEntryQuantity"
+                                Text=""
+                                WidthRequest="150"
+                                FontSize="24"/>
+
+                            <Label
+                                Text="pcs."
+                                FontSize="24"
+                                VerticalOptions="Center"/>
+
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout
+                            HorizontalOptions="Start"
+                            VerticalOptions="End"
+                            HeightRequest="50"
+                            Margin="0, 50">
+
+                            <Button
+                                Text="Submit"
+                                WidthRequest="150"
+                                BackgroundColor="#6f3799"
+                                TextColor="#d0cac1"
+                                FontSize="20"
+                                FontAttributes="Bold"
+                                Clicked="Button_Clicked_Submit"/>
+
+                        </HorizontalStackLayout>
+
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </Border>
+
+            <Border
+                Stroke="#6f3799"
+                StrokeThickness="2"
+                Padding="5, 10">
+
+                <VerticalStackLayout Spacing="10">
+                    <Label
+                        Text="History"
+                        FontSize="24"/>
+
+                    <CollectionView
+                        x:Name="collectionViewOrder"
+                        ItemsSource="{Binding orders}"
+                        HorizontalOptions="Start"
+                        HeightRequest="250"
+                        WidthRequest="1200">
+
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout Padding="8" Orientation="Horizontal" Spacing="50">
+                                    <Label Text="{Binding OrderId, StringFormat=Order id: \{0\}}" FontSize="21"/>
+                                    <Label Text="{Binding OrderDate, StringFormat=Date: \{0\}}" FontSize="21"/>
+                                    <Label Text="{Binding Quantity, StringFormat=Income: \{0\}}" FontSize="21"/>
+                                    <Label Text="{Binding ProductId, StringFormat=Product id: \{0\}}" FontSize="21"/>
+                                    <Label Text="{Binding SupplierId, StringFormat=Supplier id: \{0\}}" FontSize="21"/>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+
+                    </CollectionView>
+
+                </VerticalStackLayout>
+                
+            </Border>
+
+            <Button
+                Text="Go to Main"
+                WidthRequest="150"
+                HeightRequest="50"
+                BackgroundColor="#6f3799"
+                TextColor="#d0cac1"
+                FontSize="20"
+                FontAttributes="Bold"
+                Clicked="OnNavigateMainButtonClicked"/>
+        </VerticalStackLayout>
+
+    </ScrollView>
+</ContentPage>

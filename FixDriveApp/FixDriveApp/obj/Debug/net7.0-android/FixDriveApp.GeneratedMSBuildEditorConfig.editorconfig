@@ -1,0 +1,63 @@
+is_global = true
+build_property.TargetFramework = net7.0-android
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = true
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.RootNamespace = FixDriveApp
+build_property.ProjectDir = /Users/leroro/Projects/FixDriveApplication/FixDriveApp/FixDriveApp/
+
+[/Users/leroro/Projects/FixDriveApplication/FixDriveApp/FixDriveApp/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FixDriveApp.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[/Users/leroro/Projects/FixDriveApplication/FixDriveApp/FixDriveApp/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FixDriveApp.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[/Users/leroro/Projects/FixDriveApplication/FixDriveApp/FixDriveApp/Pages/InventoryPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FixDriveApp.Pages.InventoryPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/InventoryPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/InventoryPage.xaml
+
+[/Users/leroro/Projects/FixDriveApplication/FixDriveApp/FixDriveApp/Pages/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FixDriveApp.Pages.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/MainPage.xaml
+
+[/Users/leroro/Projects/FixDriveApplication/FixDriveApp/FixDriveApp/Pages/OrderPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FixDriveApp.Pages.OrderPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/OrderPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/OrderPage.xaml
+
+[/Users/leroro/Projects/FixDriveApplication/FixDriveApp/FixDriveApp/Pages/SupplierPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FixDriveApp.Pages.SupplierPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/SupplierPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/SupplierPage.xaml
+
+[/Users/leroro/Projects/FixDriveApplication/FixDriveApp/FixDriveApp/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FixDriveApp.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Colors.xaml
+
+[/Users/leroro/Projects/FixDriveApplication/FixDriveApp/FixDriveApp/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = FixDriveApp.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml

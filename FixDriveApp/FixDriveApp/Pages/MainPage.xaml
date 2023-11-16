@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FixDriveApp.MainPage"
+             Background="#d0cac1">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label
+                Text="Welcome to FixDrive Center" 
+                TextColor="#6f3799"
+                FontSize="46"
+                FontAttributes="Bold"
+                HorizontalOptions="CenterAndExpand" />
+
+            <Image
+                Source="logo.png"
+                HeightRequest="200"
+                WidthRequest="200"
+                HorizontalOptions="Center" />
+        
+            <Button
+                Text="Get Started"
+                BackgroundColor="#6f3799"
+                TextColor="#d0cac1"
+                FontSize="20"
+                FontAttributes="Bold"
+                WidthRequest="150"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                Clicked="OnNavigateButtonClicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+
